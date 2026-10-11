@@ -2,6 +2,13 @@
 
 **カラフルな ASCII アートで動画を再生する、クロスプラットフォーム対応のターミナル動画プレーヤー。**
 
+[English](README.md) | [简体中文](README.zh-CN.md) | [日本語](README.jp.md)
+
+![License](https://img.shields.io/badge/License-Apache%202.0-blue.svg)
+![C++](https://img.shields.io/badge/C%2B%2B-20-00599C.svg?logo=cplusplus)
+![Platform](https://img.shields.io/badge/Platform-Windows-0078D6.svg?logo=windows)
+![Status](https://img.shields.io/badge/Status-In%20Development-orange)
+
 InspiCrete Terminal Vision（略称：ICTV）は、ローカルの動画ファイルをリアルタイムでカラー ASCII アートに変換し、ターミナル上で再生することを目指した、C++ 製の実験的な動画プレーヤーです。
 
 一般的な動画プレーヤーが画面上にピクセルを描画するのに対し、ICTV は文字と 24 ビット RGB のフルカラーを用いて動画像を再現します。ターミナルならではの軽快さと、文字で映像を表現する独特のビジュアル体験を目指しています。
