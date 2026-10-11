@@ -38,7 +38,7 @@ The intended interface consists of two regions:
 │ [========------------] 40%  02:00 / 05:00  │
 │ FPS: 28.6 | CPU: 24% | RAM: 62%            │
 │ Decoder: FFmpeg | HW Accel: OFF            │
-│ [Space] Pause/Resume        [Q] Quit        │
+│ [Space] Pause/Resume        [Q] Quit       │
 └────────────────────────────────────────────┘
 ```
 
