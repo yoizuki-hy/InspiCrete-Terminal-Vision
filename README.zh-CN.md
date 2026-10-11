@@ -2,6 +2,13 @@
 
 **一款以彩色 ASCII 字符艺术为核心的跨平台终端视频播放器。**
 
+[English](README.md) | [简体中文](README.zh-CN.md) | [日本語](README.jp.md)
+
+![License](https://img.shields.io/badge/License-Apache%202.0-blue.svg)
+![C++](https://img.shields.io/badge/C%2B%2B-20-00599C.svg?logo=cplusplus)
+![Platform](https://img.shields.io/badge/Platform-Windows-0078D6.svg?logo=windows)
+![Status](https://img.shields.io/badge/Status-In%20Development-orange)
+
 InspiCrete Terminal Vision（简称 ICTV）是一款基于 C++ 开发的实验性视频播放器，旨在将本地视频文件实时转换为彩色 ASCII 字符画，并直接呈现在终端窗口中。
 
 与传统视频播放器通过常规画面显示像素不同，ICTV 使用字符与 24 位 RGB 真彩色重现动态影像，为终端带来一种轻量、独特且富有视觉表现力的视频播放体验。
