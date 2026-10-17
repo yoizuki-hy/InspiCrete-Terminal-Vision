@@ -139,12 +139,12 @@ The goal is to make each component independently testable while keeping the over
 - [x] Integrate FFmpeg video decoding
 - [x] Implement ASCII conversion and brightness mapping
 - [x] Add 24-bit RGB character rendering
-- [ ] Create a persistent bottom status bar
-- [ ] Display playback progress and elapsed time
-- [ ] Measure and display actual rendering FPS
-- [ ] Add CPU, memory, decoder, and acceleration status where available
-- [ ] Implement pause, resume, and exit controls
-- [ ] Handle terminal resizing and restore terminal state safely
+- [x] Create a persistent bottom status bar
+- [x] Display playback progress and elapsed time
+- [x] Measure and display actual rendering FPS
+- [x] Add CPU, memory, decoder, and acceleration status where available
+- [x] Implement pause, resume, and exit controls
+- [x] Handle terminal resizing and restore terminal state safely
 - [ ] Verify builds on Windows, Linux, and macOS
 - [ ] Optimize rendering performance
 - [ ] Explore interactive seeking and hardware decoding enhancements
