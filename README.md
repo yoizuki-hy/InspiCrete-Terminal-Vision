@@ -83,7 +83,7 @@ The planned development environment includes:
 Once the initial build configuration is available, the intended workflow is:
 
 ```bash
-git clone <repository-url>
+git clone https://github.com/yoizuki-hy/InspiCrete-Terminal-Vision
 cd InspiCreteTerminalVision
 
 cmake -S . -B build
@@ -115,6 +115,8 @@ Planned playback controls:
 | `Space` | Pause / Resume |
 | `Q` | Quit |
 | `Esc` | Quit |
+| `A` | Seek Backward 5s |
+| `D` | Seek Forward 5s |
 
 Mouse-based seeking and draggable progress bars may be considered for a future release.
 
