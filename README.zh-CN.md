@@ -90,7 +90,6 @@ cmake -S . -B build
 cmake --build build
 ```
 
-请将 `<repository-url>` 替换为实际的 GitHub 仓库地址。
 
 ### 使用方法
 
