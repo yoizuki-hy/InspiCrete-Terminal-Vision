@@ -83,7 +83,7 @@ ICTV は現在開発中です。初期実装と依存関係の設定が整い次
 初期のビルド設定が完成した後は、次の手順でビルドできる構成を目指しています。
 
 ```bash
-git clone <repository-url>
+git clone https://github.com/yoizuki-hy/InspiCrete-Terminal-Vision
 cd InspiCreteTerminalVision
 
 cmake -S . -B build
