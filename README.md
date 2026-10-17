@@ -134,11 +134,11 @@ The goal is to make each component independently testable while keeping the over
 
 ## 🗺️ Roadmap
 
-- [ ] Establish the C++20 and CMake project structure
-- [ ] Implement command-line arguments and error handling
-- [ ] Integrate FFmpeg video decoding
-- [ ] Implement ASCII conversion and brightness mapping
-- [ ] Add 24-bit RGB character rendering
+- [x] Establish the C++20 and CMake project structure
+- [x] Implement command-line arguments and error handling
+- [x] Integrate FFmpeg video decoding
+- [x] Implement ASCII conversion and brightness mapping
+- [x] Add 24-bit RGB character rendering
 - [ ] Create a persistent bottom status bar
 - [ ] Display playback progress and elapsed time
 - [ ] Measure and display actual rendering FPS
