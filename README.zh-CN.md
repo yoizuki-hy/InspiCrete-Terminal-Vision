@@ -83,7 +83,7 @@ ICTV 目前仍处于开发阶段。待初始实现和依赖配置完成后，将
 初始构建配置完成后，预期可以通过以下命令进行构建：
 
 ```bash
-git clone <repository-url>
+git clone https://github.com/yoizuki-hy/InspiCrete-Terminal-Vision
 cd InspiCreteTerminalVision
 
 cmake -S . -B build
@@ -115,6 +115,8 @@ ictv --version
 | `Space` | 暂停 / 继续播放 |
 | `Q` | 退出播放器 |
 | `Esc` | 退出播放器 |
+| `A` | 快退5秒 |
+| `D` | 快进5秒 |
 
 鼠标交互、点击跳转和拖动进度条等功能将视后续开发情况决定是否加入。
 
