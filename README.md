@@ -1,86 +1,86 @@
 # InspiCrete Terminal Vision
 
-**A cross-platform terminal video player powered by colorful ASCII art.**
+**A cross-platform terminal video player built around full-color ASCII art.**
 
 [English](README.md) | [简体中文](README.zh-CN.md) | [日本語](README.jp.md)
 
-![License](https://img.shields.io/badge/License-Apache%202.0-blue.svg)
+![License](https://img.shields.io/badge/License-Not%20Yet%20Selected-lightgrey.svg)
 ![C++](https://img.shields.io/badge/C%2B%2B-20-00599C.svg?logo=cplusplus)
 ![Platform](https://img.shields.io/badge/Platform-Windows-0078D6.svg?logo=windows)
 ![Status](https://img.shields.io/badge/Status-In%20Development-orange)
 
-InspiCrete Terminal Vision (ICTV) is an experimental C++ video player that transforms local video files into dynamic, full-color ASCII art directly in your terminal.
+InspiCrete Terminal Vision (ICTV) is an experimental video player written in C++. It aims to convert local video files into full-color ASCII art in real time and render them directly in a terminal window.
 
-Instead of displaying pixels on a conventional video canvas, ICTV recreates moving images using characters and 24-bit RGB colors, bringing video playback into the terminal in a lightweight, distinctive, and visually expressive way.
+Unlike conventional video players that display images as pixels, ICTV uses characters and 24-bit RGB true color to recreate moving images, bringing a lightweight, distinctive, and visually expressive video playback experience to the terminal.
 
 > Turning every frame into a world of characters.
 
 ## ✨ Features
 
-- **Colorful ASCII Video** — Transform video frames into detailed character art with 24-bit RGB true color.
-- **Real-Time Playback** — Decode and render video frames with timestamp-based playback scheduling.
-- **Live Progress Bar** — Display playback progress, elapsed time, and total duration at the bottom of the terminal.
-- **FPS Monitoring** — Show actual rendering FPS alongside the source video's frame rate.
-- **Hardware & Runtime Status** — Present available CPU, memory, resolution, decoder, and hardware-acceleration information.
-- **Terminal-Native Experience** — Keep video output and the status bar in separate terminal regions.
-- **Cross-Platform Design** — Target Windows, Linux, and macOS.
-- **Performance-Oriented Architecture** — Minimize unnecessary terminal output and memory copying.
+- **Full-Color ASCII Video** — Converts video frames into detailed ASCII art with 24-bit RGB true-color support.
+- **Real-Time Video Playback** — Decodes and renders frames according to video timestamps for continuous playback.
+- **Live Progress Bar** — Displays playback progress, elapsed time, and total video duration at the bottom of the terminal.
+- **Frame Rate Monitoring** — Shows both the actual rendering frame rate and the source video's frame rate.
+- **Hardware and Runtime Monitoring** — Displays available system information, including CPU usage, memory usage, resolution, decoder, and hardware acceleration status.
+- **Native Terminal Experience** — Separates the video output from the bottom status bar for a clean and organized layout.
+- **Cross-Platform Design** — Targets Windows, Linux, and macOS.
+- **Performance-Oriented Architecture** — Minimizes unnecessary terminal output and memory copies wherever possible.
 
-Features are being developed incrementally. Items not yet implemented should be treated as planned capabilities rather than guaranteed functionality.
+The project is under active development. Features that have not yet been implemented are planned capabilities and should not be considered available in the current version.
 
 ## 🖥️ Preview
 
-*Terminal preview coming soon.*
+*Terminal screenshots coming soon.*
 
-The intended interface consists of two regions:
+The planned interface uses a vertically divided terminal layout:
 
 ```text
 ┌────────────────────────────────────────────┐
 │                                            │
-│          COLORFUL ASCII VIDEO              │
+│             Full-Color ASCII Video         │
 │                                            │
-│       Characters recreate each frame       │
+│        Motion Recreated with Characters    │
 │                                            │
 ├────────────────────────────────────────────┤
 │ [========------------] 40%  02:00 / 05:00  │
 │ FPS: 28.6 | CPU: 24% | RAM: 62%            │
-│ Decoder: FFmpeg | HW Accel: OFF            │
-│ [Space] Pause/Resume        [Q] Quit       │
+│ Decoder: FFmpeg | HW Acceleration: Off     │
+│ [Space] Pause/Resume          [Q] Quit     │
 └────────────────────────────────────────────┘
 ```
 
-*Illustrative layout only. Actual appearance and available metrics depend on implementation and terminal capabilities.*
+*The layout above is illustrative only. The actual appearance and available information depend on the implementation and the capabilities of the terminal.*
 
-## 🛠️ Technology Stack
+## 🛠️ Tech Stack
 
 | Technology | Purpose |
 |---|---|
-| C++20 | Core implementation |
-| CMake | Build system |
-| FFmpeg | Video demuxing and decoding |
-| ANSI/VT sequences | Terminal control and rendering |
-| 24-bit RGB | Full-color character rendering |
-| Catch2 | Unit testing, planned |
+| C++20 | Core application development |
+| CMake | Project configuration and build management |
+| FFmpeg | Video container parsing and decoding |
+| ANSI/VT Control Sequences | Terminal control and frame rendering |
+| 24-bit RGB | Full-color ASCII rendering |
+| Catch2 | Unit testing, planned integration |
 
-The project aims to keep its dependencies focused and its architecture modular.
+The project aims to keep dependencies minimal, maintain clear module boundaries, and strike a balance between functionality, performance, and maintainability.
 
 ## 🚀 Getting Started
 
-ICTV is under active development. Build instructions will be finalized once the initial implementation and dependency configuration are ready.
+ICTV is currently under development. Build and usage instructions will be refined as the initial implementation and dependency configuration are completed.
 
 ### Prerequisites
 
 The planned development environment includes:
 
-- A C++20-compatible compiler
+- A compiler with C++20 support
 - CMake
 - Git
 - FFmpeg development libraries
-- A terminal with ANSI/VT support and preferably 24-bit color support
+- A terminal supporting ANSI/VT control sequences, preferably with 24-bit true-color support
 
 ### Build
 
-Once the initial build configuration is available, the intended workflow is:
+Once the initial build configuration is complete, the project is expected to be buildable with the following commands:
 
 ```bash
 git clone https://github.com/yoizuki-hy/InspiCrete-Terminal-Vision
@@ -90,94 +90,107 @@ cmake -S . -B build
 cmake --build build
 ```
 
-Replace `<repository-url>` with the actual URL of this repository.
-
 ### Usage
 
-The intended command-line interface is:
+The following command-line interface is planned:
 
 ```bash
-ictv video.mp4
-ictv "path/to/my video.mkv"
+# Navigate to the build directory
+cd ./build
 
-ictv --help
-ictv --version
+# Display the first frame of a video
+./ictv.exe --first-frame "path/test.mp4"
+
+# Play a video
+./ictv.exe video.mp4
+
+# Or specify a file path
+./ictv.exe "path/test.mkv"
+
+# Play a video using half-block rendering
+./ictv.exe --render-mode=half-block "path/test.mp4"
+
+# Display help
+./ictv.exe --help
+
+# Display version information
+./ictv.exe --version
 ```
 
-The commands above describe the planned interface. They may not work until the corresponding features have been implemented.
+These commands describe the intended command-line interface. They may not work as expected until the corresponding features are implemented.
 
 ## ⌨️ Controls
 
-Planned playback controls:
+The following playback controls are planned:
 
 | Key | Action |
 |---|---|
-| `Space` | Pause / Resume |
-| `Q` | Quit |
-| `Esc` | Quit |
-| `A` | Seek Backward 5s |
-| `D` | Seek Forward 5s |
+| `Space` | Pause / Resume playback |
+| `Q` | Quit the player |
+| `Esc` | Quit the player |
+| `A` | Seek backward 5 seconds |
+| `D` | Seek forward 5 seconds |
 
-Mouse-based seeking and draggable progress bars may be considered for a future release.
+Mouse interaction, click-to-seek functionality, and a draggable progress bar may be considered in future development.
 
 ## 🧩 Architecture
 
-ICTV is designed around small, focused modules:
+ICTV follows a modular design, separating different responsibilities into relatively independent components:
 
-- **CLI** — Command-line arguments and configuration.
-- **VideoDecoder** — Video stream handling and frame decoding.
-- **AsciiConverter** — Character mapping, brightness processing, and color conversion.
-- **TerminalRenderer** — Terminal output, layout, and rendering buffers.
-- **StatusBar** — Playback progress, FPS, video metadata, and status display.
-- **SystemMonitor** — Platform-specific runtime and hardware metrics.
-- **PlaybackController** — Playback timing, input handling, and coordination.
+- **CLI** — Handles command-line argument parsing and configuration management.
+- **VideoDecoder** — Processes video streams and decodes video frames.
+- **AsciiConverter** — Handles character mapping, brightness adjustment, and color conversion.
+- **TerminalRenderer** — Manages terminal output, interface layout, and rendering buffers.
+- **StatusBar** — Displays playback progress, frame rate, video information, and runtime status.
+- **SystemMonitor** — Collects platform-specific system performance metrics.
+- **PlaybackController** — Coordinates playback timing, input handling, and interactions between modules.
 
-The goal is to make each component independently testable while keeping the overall design practical and maintainable.
+The goal is to keep the overall design simple and practical while ensuring that individual modules remain testable and maintainable.
 
 ## 🗺️ Roadmap
 
 - [x] Establish the C++20 and CMake project structure
-- [x] Implement command-line arguments and error handling
+- [x] Implement command-line argument parsing and error handling
 - [x] Integrate FFmpeg video decoding
-- [x] Implement ASCII conversion and brightness mapping
-- [x] Add 24-bit RGB character rendering
-- [x] Create a persistent bottom status bar
-- [x] Display playback progress and elapsed time
-- [x] Measure and display actual rendering FPS
-- [x] Add CPU, memory, decoder, and acceleration status where available
-- [x] Implement pause, resume, and exit controls
-- [x] Handle terminal resizing and restore terminal state safely
-- [ ] Verify builds on Windows, Linux, and macOS
+- [x] Implement ASCII character conversion and brightness mapping
+- [x] Implement 24-bit RGB full-color character rendering
+- [x] Implement a real-time status bar anchored to the bottom of the terminal
+- [x] Display playback progress and timing information
+- [x] Calculate and display the actual rendering frame rate
+- [x] Display CPU usage, memory usage, decoder information, and hardware acceleration status when available
+- [x] Implement pause, resume, and quit controls
+- [x] Support terminal window resizing and safely restore terminal state on exit
+- [ ] Validate builds on Windows, Linux, and macOS
 - [ ] Optimize rendering performance
-- [ ] Explore interactive seeking and hardware decoding enhancements
+- [ ] Explore interactive video seeking and enhanced hardware decoding
 
 ## 🤝 Contributing
 
-Contributions, ideas, bug reports, and technical discussions are welcome.
+Suggestions, bug reports, feature requests, and technical discussions are welcome.
 
-Before submitting a change, please keep the following principles in mind:
+When contributing, please follow these principles:
 
-- Prefer clear, maintainable C++20 code.
-- Preserve cross-platform compatibility.
-- Avoid unnecessary dependencies.
-- Test changes whenever practical.
-- Document platform-specific behavior and limitations.
-- Do not claim functionality that has not been verified.
+- Prioritize clear, maintainable modern C++ code.
+- Preserve cross-platform compatibility wherever possible.
+- Avoid unnecessary third-party dependencies.
+- Add tests for code changes whenever practical.
+- Document platform-specific differences and feature limitations clearly.
+- Do not describe unverified functionality as implemented.
 
-Contribution guidelines may be expanded as the project matures.
+Contribution guidelines and development standards will be refined as the project matures.
 
 ## 📄 License
 
-The project license has not yet been selected.
+The project has not yet selected an open-source license.
 
-A license will be added before the project is distributed for reuse. Until then, please do not assume that the repository is available under an open-source license.
+A suitable license will be chosen based on the project's needs before official distribution and code reuse are permitted. Until a license is formally added, do not assume that the repository's code is freely available for use, modification, or redistribution.
 
 ## 👨‍💻 Author
 
 **InspiCrete Studio**
 
-*Exploring the intersection of software, visuals, and interactive experiences.*
+*Exploring the intersection of software, visual art, and interactive experiences.*
 
 ---
 
-*InspiCrete Terminal Vision — video, reimagined in characters.*
+*InspiCrete Terminal Vision — Reimagining moving images, one character at a time.*
