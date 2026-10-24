@@ -96,11 +96,25 @@ cmake --build build
 计划提供以下命令行接口：
 
 ```bash
-ictv video.mp4
-ictv "path/to/my video.mkv"
+#定位文件夹
+cd ./build
 
-ictv --help
-ictv --version
+#获取视频第一帧
+./ictv.exe --first-frame "path/test.mp4"
+
+#播放视频
+./ictv.exe video.mp4
+或
+./ictv.exe "path/test.mkv"
+
+#以Half-Bolck模式播放视频
+./ictv.exe --render-mode=half-block "path/test.mp4"
+
+#获取帮助
+./ictv.exe --help
+
+#获取版本信息
+./ictv.exe --version
 ```
 
 以上为预期的命令行接口。相关功能尚未实现时，这些命令可能无法正常运行。
